@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Test Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">My Website</a></div>
+            <ul class="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#project">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                
+            </ul>
+            <a href="form.html" class="action-btn" style="--clr:#fff"><span>Contact</span></a>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="form.html" class="action-btn" style="--clr:#fff"><span>Contact</span></a></li>
+        </div>
+    </header>
+    <!--Thats the container for all the sections-->
+    <div class="container">
+        <!--Thats the first section of the website-->
+        <section class="hero" id ="home">
+            <h1>Welcome</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Obcaecati porro est quos fugiat! Expedita quo quis quas, praesentium ab deleniti.
+            </p>
+        </section>
+        <!--Thats the second section of the website-->
+        <section class="hero" id ="about">
+            <h1>About</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Obcaecati porro est quos fugiat! Expedita quo quis quas, praesentium ab deleniti.
+            </p>
+        </section>
+        <!--Thats the third section of the website-->
+        <section class="hero" id ="project">
+            <h1>Projects</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Obcaecati porro est quos fugiat! Expedita quo quis quas, praesentium ab deleniti.
+            </p>
+        </section>
+        <!--Thats the fourth section of the website-->
+        <section class="hero" id ="skills">
+            <h1>Skills</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />Obcaecati porro est quos fugiat! Expedita quo quis quas, praesentium ab deleniti.
+            </p>
+        </section>
+    </div>
+    <!--Thats the footer of the website-->
+    <footer>
+        <ul class="social_icon">
+            <li><a href="https://www.instagram.com/salar.kl/" class="cta"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="#" class="cta"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="#" class="cta"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+            <li><a href="https://github.com/slrza" class="cta"><ion-icon name="logo-github"></ion-icon></a></li>
+        </ul>
+        <ul class="menu">
+            <li><a href="#" class="cta">Home</ion-icon></a></li>
+            <li><a href="#about" class="cta">About</ion-icon></a></li>
+            <li><a href="#project" class="cta">Projects</ion-icon></a></li>
+            <li><a href="#skills" class="cta">Skills</ion-icon></a></li>
+            <li><a href="form.html" class="cta">Contact</ion-icon></a></li>
+        </ul>
+        <p>thats a test website from @slrza</p>
+    </footer>
+    <!--Thats the script for the toggle button-->
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn');
+        const toggleBtnIcon = document.querySelector('.toggle-btn i');
+        const dropDownMenu = document.querySelector('.dropdown-menu');
+
+
+        toggleBtn.onclick = function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
