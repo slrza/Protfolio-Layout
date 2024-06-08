@@ -70,35 +70,29 @@ header {
 
 /* Action Button CSS */
 
-.action-btn {
-    position: relative;
-    background: #fff;
+button {
+    transition: all 0.5s;
+    font-size: 17px;
+    padding: 1ch 2ch;
+    background-color: white;
     color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    letter-spacing: 0.1em;
-    font-weight: 400;
-    padding: 10px 30px;
-    transition: 0,5s;
-    transition: all 0.3s ease 0s;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 0px hsl(0, 0%, 90%),
+      4px 4px 0px hsl(0, 0%, 80%),
+      6px 6px 0px hsl(0, 0%, 70%),
+      8px 8px 0px hsl(0, 0%, 60%),
+      10px 10px 0px hsl(0, 0%, 50%),
+      12px 12px 0px hsl(0, 0%, 40%),
+      14px 14px 0px hsl(0, 0%, 30%),
+      16px 16px 0px hsl(0, 0%, 20%),
+      18px 18px 0px hsl(0, 0%, 10%);
 }
-
-.action-btn:hover {
-    letter-spacing: 0.25;
-    background: var(--clr);
-    box-shadow: 0 0 10px var(--clr);
-    transition: all 0.3s ease 0s;
-    color: #000;
-}
-
-.action-btn span {
-    position: relative;
-    z-index: 1;
-}
-
-.actions-btn:active {
-    scale: 0.95;
+  
+button:hover {
+    background-color: hsl(0, 0%, 0%);
+    color: #fff;
+    box-shadow: none;
 }
 
 /* Dropdown Menu CSS */
@@ -110,7 +104,7 @@ header {
     top: 60px;
     height: 0;
     width: 300px;
-    background: rgba(255, 255, 255, 0.07);
+    background: transparent;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -151,6 +145,59 @@ section.hero {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+}
+
+/* Card CSS */
+
+.card {
+    width: 1210px;
+    height: 454px;
+    border-radius: 4px;
+    background: transparent;
+    display: flex;
+    gap: 100px;
+}
+  
+.card p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: rgb(17, 17, 17);
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 0px hsl(0, 0%, 90%),
+      4px 4px 0px hsl(0, 0%, 80%),
+      6px 6px 0px hsl(0, 0%, 70%),
+      8px 8px 0px hsl(0, 0%, 60%),
+      10px 10px 0px hsl(0, 0%, 50%),
+      12px 12px 0px hsl(0, 0%, 40%),
+      14px 14px 0px hsl(0, 0%, 30%),
+      16px 16px 0px hsl(0, 0%, 20%),
+      18px 18px 0px hsl(0, 0%, 10%);
+}
+  
+.card p:hover {
+    flex: 3;
+}
+  
+.card p span {
+    min-width: 14em;
+    padding: .5em;
+    text-align: center;
+    transform: rotate(-90deg);
+    transition: all .5s;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: .1em;
+}
+  
+.card p:hover span {
+    transform: rotate(0);
 }
 
 /* Footer CSS */
